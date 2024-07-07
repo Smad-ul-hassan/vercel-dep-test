@@ -3,13 +3,13 @@ import cors from "cors";
 
 const app = express();
 
-export var corsOptions = {
-  origin: function (origin, callback) {
-    return callback(null, true);
-  },
-  credentials: true,
-};
-app.use(cors(corsOptions));
+// export var corsOptions = {
+//   origin: function (origin, callback) {
+//     return callback(null, true);
+//   },
+//   credentials: true,
+// };
+app.use(cors());
 // Sample route
 app.get("/check", (req, res) => {
   return res.json({ message: "**Wellcome to epitap**" });
